@@ -1,16 +1,17 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import fg from '../../../../public/fg.jpg'
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import fg from "../../../../public/fg.jpg";
+import Link from "next/link";
 
 const navigation = [
-  { name: 'About', href: '#', current: true },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
- ]
+  { name: "About", href: "/", current: true },
+  { name: "Projects", href: "/projects", current: false },
+  { name: "Contact", href: "/contact", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Nav() {
@@ -35,29 +36,34 @@ export default function Nav() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden rounded-full"
-                    src='https://t3.ftcdn.net/jpg/03/47/10/94/360_F_347109439_Rx98eJV8RRkZNwdDORnJxuaqzmBTOJbg.jpg'
+                    src="https://t3.ftcdn.net/jpg/03/47/10/94/360_F_347109439_Rx98eJV8RRkZNwdDORnJxuaqzmBTOJbg.jpg"
                     alt="Your Company"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block rounded-full"
-                    src='https://t3.ftcdn.net/jpg/03/47/10/94/360_F_347109439_Rx98eJV8RRkZNwdDORnJxuaqzmBTOJbg.jpg'
+                    src="https://t3.ftcdn.net/jpg/03/47/10/94/360_F_347109439_Rx98eJV8RRkZNwdDORnJxuaqzmBTOJbg.jpg"
                     alt="Your Company"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
+                        <Link
                         href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                        >   
+                        <p
+                            key={item.name}
+                            className={classNames(
+                            item.current
+                                ? "bg-gray-900 text-white"
+                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                            )}
+                            aria-current={item.current ? "page" : undefined}
+                        >
+                            {item.name}
+                        </p>
+                        </Link>
                     ))}
                   </div>
                 </div>
@@ -72,10 +78,12 @@ export default function Nav() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -85,5 +93,5 @@ export default function Nav() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
