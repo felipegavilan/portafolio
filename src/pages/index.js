@@ -64,7 +64,7 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center flex-col pt-2 animate-fade animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
         <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl mt-5 mb-5">
-          Mis projectos
+          Mis proyectos
         </h2>
       </div>
       <div

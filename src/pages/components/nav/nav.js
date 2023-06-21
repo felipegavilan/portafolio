@@ -50,25 +50,25 @@ export default function Nav() {
                   <div className="flex space-x-4">
                     <Link key="about" href="/">
                       <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium ">
-                        About
+                        Sobre mi
                       </p>
                     </Link>
                     {!isOnSpecificRouter ?
                     <Link key="projects" href={"/#projectos"}>
                       <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                        Projects
+                        Proyectos
                       </p>
                     </Link> : 
                     <button onClick={scrollToDiv}>
                       <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium ">
-                        Projects
+                        Proyectos
                       </p>
                     </button>
                     }
 
                     <Link key="contact" href="/contact">
                       <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium ">
-                        Contact
+                        Contacto
                       </p>
                     </Link>
                   </div>
@@ -80,25 +80,25 @@ export default function Nav() {
             <div className="space-y-1 px-2 pb-3 pt-2">
               <Link key="about" href="/">
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                  About
+                  Sobre mi
                 </p>
               </Link>
               {
                 !isOnSpecificRouter ? 
               <Link key="projects" href={"/#projectos"}>
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                  Projects
+                  Proyectos
                 </p>
               </Link> :
               <button onClick={scrollToDiv}>
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                  Projects
+                  Proyectos
                 </p>
               </button>
               }
               <Link key="contact" href="/contact">
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                  Contact
+                  Contacto
                 </p>
               </Link>
             </div>
