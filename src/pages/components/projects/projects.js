@@ -1,4 +1,5 @@
-import { IconDemo, IconGit } from "@/pages/assets/iconsSVG";
+import IconDemo from "@/pages/assets/iconDemo";
+import IconGit from "@/pages/assets/iconGit";
 import { useState } from "react";
 
 export default function Projects() {

@@ -1,4 +1,7 @@
-import { IconFacebook, IconGit, IconLinkedin, IconTwitter } from "@/pages/assets/iconsSVG";
+import IconFacebook from "@/pages/assets/iconFacebook";
+import IconGit from "@/pages/assets/iconGit";
+import IconLinkedin from "@/pages/assets/iconLinkedin";
+import IconTwitter from "@/pages/assets/iconTwitter";
 
 export default function ContactLinks() {
   return (

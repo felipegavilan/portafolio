@@ -1,4 +1,6 @@
-import { LogoJavascript, LogoHtml, LogoCss3 } from "@/pages/assets/logos";
+import LogoHtml from '@/pages/assets/logoHtml'
+import LogoCss3 from '@/pages/assets/logoCss3'
+import LogoJavascript from '@/pages/assets/logoJavascript'
 import logoReact from '../../../../public/react.webp'
 import logoNext from '../../../../public/nextjs.webp'
 import logoExpress from '../../../../public/express.png'
