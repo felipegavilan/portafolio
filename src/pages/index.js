@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Skills from "./components/skills/skills";
 import Projects from "./components/projects/projects";
+import ContactLinks from "./components/contactLinks/contactLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,18 +54,31 @@ export default function Home() {
       <div className="flex justify-center mt-8">
         <div className="flex w-44 animate-fade-up animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
           <button
-            className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 animate-pulse animate-infinite animate-duration-1000 animate-delay-[10ms] animate-ease-in-out"
             onClick={handlerDownload}
           >
             Descargar CV
           </button>
         </div>
       </div>
+      <div className="flex items-center justify-center flex-col pt-2 animate-fade animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
+        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl mt-5 mb-5">
+          Mis projectos
+        </h2>
+      </div>
       <div
         id="projectos"
-        className="flex justify-center mt-8 animate-jump-in animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out"
+        className="flex justify-center mt-1 animate-jump-in animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out"
       >
         <Projects />
+      </div>
+      <div className="flex flex-1 flex-col pt-4 justify-center items-center" >
+      <div className="flex items-center justify-center flex-col animate-fade animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
+        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl mt-5 mb-5">
+          Mis Redes sociales
+        </h2>
+      </div>
+        <ContactLinks/>
       </div>
     </div>
   );
