@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function Skills() {
   return (
     <div className="flex flex-1 items-center justify-center m-4 animate-fade-up animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
-        <div className="grid grid-cols-3 content-center gap-2  space-x-3 md:grid-cols-6 lg:grid-cols-12 lg:gap-1 ">
+        <div className="grid  max-sm:grid-cols-3 content-center gap-2  space-x-3 max-md:grid-cols-4 max-lg:grid-cols-6 lg:grid-cols-12 lg:gap-1 ">
           <div className="w-16 ml-3">
             <Image src={logoReact} alt="logoReact" />
           </div>
