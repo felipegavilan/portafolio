@@ -1,20 +1,21 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import fg from "../../../../public/fg.jpg";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-
-const navigation = [
-  { name: "About", href: "/", current: false },
-  { name: "Projects", href: "/projects", current: false },
-  { name: "Contact", href: "/contact", current: false },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { useRouter } from "next/router";
 
 export default function Nav() {
+  const router = useRouter();
+
+  const isOnSpecificRouter = router.pathname === "/";
+
+  const scrollToDiv = () => {
+    const divPosition = document.getElementById("projectos").offsetTop;
+    window.scrollTo({
+      top: divPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -47,25 +48,29 @@ export default function Nav() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item, i) => (
-                        <Link
-                        key={i}
-                        href={item.href}
-                        >   
-                        <p
-                            key={item.name}
-                            className={classNames(
-                            item.current
-                                ? "bg-gray-900 text-white"
-                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                            "rounded-md px-3 py-2 text-sm font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                        >
-                            {item.name}
-                        </p>
-                        </Link>
-                    ))}
+                    <Link key="about" href="/">
+                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium ">
+                        About
+                      </p>
+                    </Link>
+                    {!isOnSpecificRouter ?
+                    <Link key="projects" href={"/#projectos"}>
+                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                        Projects
+                      </p>
+                    </Link> : 
+                    <button onClick={scrollToDiv}>
+                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium ">
+                        Projects
+                      </p>
+                    </button>
+                    }
+
+                    <Link key="contact" href="/contact">
+                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium ">
+                        Contact
+                      </p>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -73,25 +78,29 @@ export default function Nav() {
           </div>
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-            {navigation.map((item, i) => (
-                        <Link
-                        key={i}
-                        href={item.href}
-                        >   
-                        <p
-                            key={item.name}
-                            className={classNames(
-                            item.current
-                                ? "bg-gray-900 text-white"
-                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                            "rounded-md px-3 py-2 text-sm font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                        >
-                            {item.name}
-                        </p>
-                        </Link>
-                    ))}
+              <Link key="about" href="/">
+                <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  About
+                </p>
+              </Link>
+              {
+                !isOnSpecificRouter ? 
+              <Link key="projects" href={"/#projectos"}>
+                <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  Projects
+                </p>
+              </Link> :
+              <button onClick={scrollToDiv}>
+                <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  Projects
+                </p>
+              </button>
+              }
+              <Link key="contact" href="/contact">
+                <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  Contact
+                </p>
+              </Link>
             </div>
           </Disclosure.Panel>
         </>
