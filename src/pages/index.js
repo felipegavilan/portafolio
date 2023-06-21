@@ -3,6 +3,7 @@ import Skills from "./components/skills/skills";
 import Projects from "./components/projects/projects";
 import ContactLinks from "./components/contactLinks/contactLinks";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -41,7 +42,7 @@ export default function Home() {
       <div className="flex flex-1 items-center pt-3 justify-center animate-jump-in animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out ">
         <img
           className="block w-80 rounded-full hover:border-2 border-purple-500"
-          src="felipe.jpg"
+          src="Felipe.jpg"
           alt="profile"
         />
       </div>
