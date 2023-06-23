@@ -16,7 +16,7 @@ export default function Projects() {
  
 
   return (
-    <div className="flex flex-col space-y-2 xl:grid grid-cols-2  xl:space-x-3 lg:space-y-0 lg:flex lg:flex-row ">
+    <div className="flex flex-col space-y-2 xl:grid grid-cols-2  xl:space-x-3 lg:space-y-0 lg:flex lg:flex-row  ">
       <div className="flex justify-center">
         <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900">
           <img

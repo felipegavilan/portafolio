@@ -1,12 +1,12 @@
-import IconFacebook from "@/pages/assets/iconFacebook";
+import IconMail from "@/pages/assets/iconMail";
 import IconGit from "@/pages/assets/iconGit";
 import IconLinkedin from "@/pages/assets/iconLinkedin";
 import IconTwitter from "@/pages/assets/iconTwitter";
 
 export default function ContactLinks() {
   return (
-    <div className="flex flex-row space-x-10 pt-4 md:space-x-16 items-center mb-10 animate-bounce animate-infinite animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
-      <div className="hover:bg-blue-200 hover:rounded ">
+    <div className="flex flex-row space-x-10  md:space-x-16 items-center animate-bounce animate-infinite animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
+      <div className="hover:bg-gradient-to-r hover:from-violet-200 hover:to-fuchsia-400 hover:rounded ">
         <a
           href="https://www.linkedin.com/in/felipe-gavilan-b80348aa/"
           target="_blank"
@@ -14,27 +14,17 @@ export default function ContactLinks() {
           <IconLinkedin />
         </a>
       </div>
-      <div className="hover:bg-blue-200 hover:rounded">
-        <a 
-        href="https://github.com/felipegavilan"
-        target="_blank">
+      <div className="hover:bg-gradient-to-r hover:from-violet-200 hover:to-fuchsia-400 hover:rounded">
+        <a href="https://github.com/felipegavilan" target="_blank">
           <IconGit />
         </a>
       </div>
-      <div className="hover:bg-blue-200 hover:rounded">
-        <a 
-        href="https://www.facebook.com/felipegaviilan"
-        target="_blank"
-        className="hover:bg-blue-200 hover:rounded"
+      <div className="hover:bg-gradient-to-r hover:from-violet-200 hover:to-fuchsia-400 hover:rounded">
+        <a
+          href="mailto:felipegaviilan@gmail.com"
+          target="_blank"
         >
-          <IconFacebook />
-        </a>
-      </div>
-      <div className="hover:bg-blue-200 hover:rounded">
-        <a 
-        href="https://twitter.com/felipegaviilann"
-        target="_blank">
-          <IconTwitter />
+          <IconMail />
         </a>
       </div>
     </div>

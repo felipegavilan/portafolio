@@ -2,6 +2,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import ContactLinks from "./components/contactLinks/contactLinks";
+import Foooter from "./components/footer/footer";
 
 export default function Contact() {
   const refForm = useRef();
@@ -36,13 +37,9 @@ export default function Contact() {
     <>
       <section className="animate-fade-left animate-once animate-duration-1000  animate-ease-in-out">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+          <h2 className="mb-16 mt-8 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
             Envíame un mensaje
           </h2>
-          <p className="mb-8 lg:mb-16 font-light text-center text-white-500 dark:text-white-400 sm:text-xl">
-            Necesitas más información sobre mí? Completa el siguiente formulario
-            y me pondré en contacto contigo a la brevedad
-          </p>
           <form
             ref={refForm}
             action=""
@@ -106,13 +103,16 @@ export default function Contact() {
           </form>
         </div>
       </section>
-      <div className="flex flex-1 flex-col justify-center items-center" >
+      <div className="flex flex-1 flex-col justify-center items-center max-md:mt-2 max-lg:mt-10" >
       <div className="flex items-center justify-center flex-col animate-fade animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out">
         <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl mt-5 mb-5">
-          Mis Redes sociales
+       Redes sociales
         </h2>
       </div>
         <ContactLinks/>
+        <div className="m-3">
+        <Foooter/>
+        </div>
       </div>
     </>
   );
