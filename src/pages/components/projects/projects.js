@@ -6,21 +6,19 @@ export default function Projects() {
   const [expanded, setExpanded] = useState(false);
   const [expanded2, setExpanded2] = useState(false);
   
-
   const toggleExpansion = () => {
     setExpanded(!expanded);
   };
   const toggleExpansion2 = () => {
     setExpanded2(!expanded2);
   };
- 
-
+  
   return (
     <div className="flex flex-col space-y-2 xl:grid grid-cols-2  xl:space-x-3 lg:space-y-0 lg:flex lg:flex-row  ">
       <div className="flex justify-center">
         <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900">
           <img
-            className="object-cover w-full rounded-t-lg h-96 w-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg md:h-80 hover:md:w-60"
+            className="object-cover w-full rounded-t-lg h-96  md:h-auto md:w-48 md:rounded-none md:rounded-l-lg hover:md:w-60"
             src="mombaby.png"
             alt="mom"
           />
@@ -81,7 +79,7 @@ export default function Projects() {
       <div className="flex justify-center">
         <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900">
           <img
-            className="object-cover w-full rounded-t-lg h-96 w-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg md:h-80 hover:md:w-60"
+            className="object-cover w-full rounded-t-lg h-96  md:h-auto md:w-48 md:rounded-none md:rounded-l-lg hover:md:w-60"
             src="foodapp.jfif"
             alt="mom"
           />
@@ -137,10 +135,52 @@ export default function Projects() {
           </div>
         </div>
       </div>
+      <div className="flex justify-center ">
+        <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900">
+          <img
+            className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg hover:md:w-60"
+            src="todoapp.png"
+            alt="mom"
+          />
+          <div className="flex flex-col justify-between p-4 leading-normal">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              TODO APP
+            </h5>
+            <p
+              className={`line-clamp-6 ${
+                expanded2 ? "line-clamp-none" : "line-clamp-6"
+              } mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify`}
+            >
+              Establecé tus tareas diarias y tene un mejor control de tus
+              actividades, donde podes marcar los cumplidos, ver los que siguen
+              activos o todos. Tambien con la funcionalidad de limpiar todos los
+              que ya estan completados.
+            </p>
+            <div
+              id="links"
+              className="flex flex-row items-center justify-center max-w-xl space-x-8 mt-4 "
+            >
+              <div className="hover:bg-black hover:rounded">
+                <a
+                  href="https://github.com/felipegavilan/toDoApp"
+                  target="_blank"
+                >
+                  <IconGit />
+                </a>
+              </div>
+              <div className="hover:bg-black hover:rounded">
+                <a href="https://to-do-app-one-green.vercel.app/" target="_blank">
+                  <IconDemo />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="flex justify-center lg:pr-3 lg:pt-4">
         <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-900">
           <img
-            className="object-cover w-full rounded-t-lg h-96 w-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg md:h-80 hover:md:w-60"
+            className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg hover:md:w-60"
             src="portafolio.png"
             alt="mom"
           />
@@ -149,12 +189,14 @@ export default function Projects() {
               Portafolio
             </h5>
             <p
-              className={'mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify'}
+              className={
+                "mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify"
+              }
             >
               Mi portafolio web. Aquí muestro mis proyectos y redes sociales.
-              Implementé Next.js y Tailwind CSS para crear una experiencia moderna y
-              atractiva. Explora mis proyectos y conéctate conmigo en las redes
-              sociales. ¡Gracias por visitar!
+              Implementé Next.js y Tailwind CSS para crear una experiencia
+              moderna y atractiva. Explora mis proyectos y conéctate conmigo en
+              las redes sociales. ¡Gracias por visitar!
             </p>
             <div
               id="links"
