@@ -45,7 +45,7 @@ export default function Home() {
         <div className="flex flex-1 items-center  pt-3 justify-center animate-jump-in animate-once animate-duration-1000 animate-delay-[10ms] animate-ease-in-out ">
           <img
             className="block w-64 rounded-full hover:border-2 border-fuchsia-400"
-            src="Felipe.jpg"
+            src="Felipe.jpeg"
             alt="profile"
           />
         </div>
